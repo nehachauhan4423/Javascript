@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic form</title>
+</head>
+
+<body align="center">
+    <section>
+        <div>
+            <h2 style="font-family: Arial, Helvetica, sans-serif;text-decoration:underline;">USER FORM</h2>
+            <form>
+                Name : <input type="text" id="name"style="padding: 5px;">
+                Phone : <input type="text" id="phone" style="padding: 5px;">
+                <input type="button" value="SUBMIT" onclick="datasaver()" style="width: 150px;height: 40px;background-color: rgb(253, 214, 163);color:rgb(0, 0, 0);border:1px solid black;">
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div align="center">
+            <h2 style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;text-decoration: underline;">VIEW USER</h2>
+            <table border="1" cellpadding="6px" style="border: 2px solid black;">
+                <thead>
+                    <tr style="font-family: sans-serif;">
+                        <th>SR NO.</th>
+                        <th>NAME</th>
+                        <th>PHONE</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        let data = [];
+        const datasaver = () => {
+            let name = document.getElementById('name').value;
+            let phone = document.getElementById('phone').value;
+
+            if (!name || !phone) {
+                alert("ALL FIELD REQUIRED");
+                return false;
+            }
+
+            let obj = {
+                grid: Math.floor(Math.random() * 10000),
+                username: name,
+                userphone: phone
+
+            }
+
+            data.push(obj)
+            console.log(data);
+            document.getElementById('name').value = "";
+            document.getElementById('phone').value = "";
+        }
+    </script>
+</body>
+
+</html>
