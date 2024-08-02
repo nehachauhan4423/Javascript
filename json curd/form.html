@@ -11,8 +11,9 @@
     <div align="center">
         <h2>ADD USER</h2>
         <form>
-            Name : <input type="text" id="name" placeholder="Enter Name" style="padding: 3px;"><br><br>
-            Phone : <input type="text" id="phone" placeholder="Enter Phone" style="padding: 3px;"><br><br>
+            <input type="hidden" id="editid"><br><br>
+            Name : <input type="text" id="name" placeholder="Enter Name" ><br>
+            Phone : <input type="text" id="phone" placeholder="Enter Phone"><br>
             <button id="add" type="button" onclick="saveData()">SUBMIT</button>
             <button id="edit" onclick="updatedata()" type="button">EDIT</button>
             <br><br><br>
@@ -30,7 +31,7 @@
             <tbody id="view"></tbody>
         </table>
     </div>
-    <script src="curd.js"></script>
+    <script src="./curd.js" type="text/javascript"></script>
 </body>
 
 </html>
